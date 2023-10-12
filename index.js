@@ -86,6 +86,40 @@ form.addEventListener('submit', async (e) => {
       window.location.reload();
   });
   
-  // Rest of your code...
+  
+  
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const homeButton = document.getElementById('home-button');
+  const form = document.getElementById('form');
+  const search = document.getElementById('search');
+  const main = document.getElementById('main');
+
+  homeButton.addEventListener('click', () => {
+      window.location.reload();
+  });
+
+  form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const searchValue = search.value.trim();
+      if (searchValue) {
+          try {
+              const res = await fetch(`https://api.themoviedb.org/3/search/movie?query=${searchValue}&api_key=4bcf9facff0a502716b33545d16c9ef8`, {
+                  headers: {
+                      Authorization: `Bearer ${BEARER_TOKEN}`
+                  }
+              });
+              const data = await res.json();
+              displayMovies(data.results);
+              search.value = ''; // Clear the search input after submission
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      } else {
+          
+      }
+  });
+
   
 });
