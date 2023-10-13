@@ -36,7 +36,7 @@ body{
 .logo{
   font-family: 'Alice', serif;
   font-size: 30px;
-  color:blueviolet
+  color:rgb(83, 54, 92);
 
 }
 .menu-container{
@@ -152,7 +152,7 @@ body{
 
 .featured-content{
   /* height: 50vh; */
-  background-color:rgb(63, 62, 62)
+  background-color:rgb(34, 31, 31)
   
 }
 
@@ -177,7 +177,7 @@ main{
 }
 
 .container-movies{
-  width: 250px;
+  width: 200px;
   height:450px;
   margin: 1rem;
   background-color: rgb(46, 29, 51);
@@ -199,6 +199,7 @@ main{
   justify-content: space-between;
   padding: 0.5rem 1rem 1rem;
   letter-spacing:1px ;
+  font-size: 15px;
 
 }
 .movie-info span{
@@ -206,6 +207,7 @@ main{
   padding:0.25rem 0.5rem;
   border-radius: 3px;
   font-weight: bold;
+  font-size: small;
 }
 .movie-info span.green{
   color: aquamarine;
@@ -228,7 +230,8 @@ main{
   right: 0;
   max-height: 100%;
   transform:translateY(101%);
-  transition: transform 0.3s ease;
+  transition:transform 0.3s ease;
+  font-size: xx-small;
 } 
 
 .container-movies:hover .overview{
